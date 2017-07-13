@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- Your own application should inherit from spring-boot-starter-parent -->
+	<groupId>com.example</groupId>
+	<version>0.0.1</version>
+	<artifactId>spring-example</artifactId>
+	<packaging>jar</packaging>
+	<name>spring-example</name>
+	<description>Spring Boot Simple Sample</description>
+	<url>http://projects.spring.io/spring-boot/</url>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>1.5.3.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+			<version>1.5.3.RELEASE</version>
+		</dependency>
+		<!-- Provided -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<version>1.5.3.RELEASE</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Test -->
+		<!-- <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>1.5.3.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+ -->
+	</dependencies>
+
+	<build>
+		<plugins> 
+			<plugin>
+			   <artifactId>maven-jar-plugin</artifactId>
+			   <configuration>
+			     <archive>
+			       <addMavenDescriptor>false</addMavenDescriptor>
+			     </archive>
+			   </configuration>
+			 </plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>1.5.3.RELEASE</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>
